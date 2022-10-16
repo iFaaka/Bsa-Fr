@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheets/documentacion.css">
+    <title>Documentacion Front</title>
+</head>
+<body>
+    <aside>
+        <span>En esta pagina encontraras: </span>
+        <div class="aside-div">
+            <a href="#bienvenida">Bienvenida</a>
+            <a href="#que-archivos">Que archivos tengo</a>
+            <a href="#archivos-html">Los archivos HTML</a>
+            <a href="#archivos-css">Los archivos CSS</a>
+            <a href="#archivos-js">Los archivos Javascript</a>
+            <a href="#create-cards">CreateCards</a>
+            <a href="#get-data">GetData</a>
+            <a href="#products">Products</a>
+            <a href="#title&c">Title&Categories</a>
+        </aside>
+    <section>
+        <h1 id="bienvenida">Bienvenida</h1>
+        <span>Llegaste a la parte de documentacion del Front, de aqui en adelante vas a poder ver como funciona cada archivo y que funcion cumple</span>
+        <p>Si queres llegar al repositorio del front, podes acceder desde <a href='https://github.com/iFaaka/Bsa-Fr'>aqui</a></p>
+
+
+        <article id="que-archivos">
+            <h4>Que archivos tengo</h4>
+            <span>El front simula ser parte del MVC que tiene el BackEnd, por lo que consta de una carpeta public donde dentro de ella se separan los archivos.
+            </span>
+
+            <img class='img-description' src='https://i.ibb.co/HzWKbqy/imagen-2022-10-16-164400275.png'>
+        </article>
+
+        <article id="archivos-html">
+            <h4>Los archivos HTML</h4>
+
+            <ul>
+                <li>
+                    <span>Index: Es el home de nuestro Front, en el contamos con una descripcion de la actividad y las redirecciones deseadas</span>
+                </li>
+                <li>
+                    <span>Products: Aqui sucede la magia, es la pagina donde se localiza la tienda.</span>
+                    <span>Cuenta con un navbar identico al del index, la estructura basica para el dropdown button donde se encuentran las categorias que se extraen de la base de datos y agrega unas extras de mi autoria, como productos con descuento y recibir todos los productos. Tambien agrega el input que servira como buscador</span>
+                </li>
+                <li>
+                    <span>DocumentacionAPI y DocumentacionFront: Son los HTML correspondientes a la doc de esta pagina. </span>
+                </li>
+            </ul>
+            <img class="img-description" src="https://i.ibb.co/3SxvzTv/imagen-2022-10-16-165315482.png"> 
+        </article>
+
+        <article id="archivos-css">
+            <h4>Los Archivos CSS</h4>
+
+            <ul>
+                <li>
+                    <span>
+                        Documentacion.css: Guarda los estilos para ambas documentaciones
+                    </span>
+                </li>
+                <li>
+                    Navbar: Comprende los estilos del navbar.
+                </li>
+                <li>
+                    Title&Categories: Comprende los estilos para el titulo de la tienda y todo lo que se refiere al input buscador y el dropdown de las categorias.
+                </li>
+                <li>Products: Comprende los estilos para los productos, como las cards en las que estan introducidos</li>
+                <li>
+                    Index: Comprende los estilos para nuestra pagina de inicio.
+                </li>
+
+            </ul>
+            <img class='img-description' src="https://i.ibb.co/1Q48TgZ/image.png"
+        </article>
+
+        <article id="archivos-js">
+            <h4>Los archivos JavaScript</h4>
+
+            <ul>
+                <li>
+                    <span>createCards: Comprende toda la logica para la creacion de las tarjetas de los productos</span>
+
+                </li>
+                <li>
+                    <span>getData: Comprende la logica para obtener todos los datos extraidos de la BD</span>
+                    
+                </li>
+                <li>
+                    <span>products: Contiene las funciones que llaman a otras funciones para poder hacer consultas especificas a la API. Sera explicada en profundidad mas adelante</span>
+
+                </li>
+                <li>
+                    <span>title&categories: Comprende la generacion del titulo y creacion del menu de categorias, ademas de tambien manejar el input buscador </span>
+
+                </li>
+            </ul>
+            <img class="img-description" src="https://i.ibb.co/C7nXYzg/image.png">
+        </article>
+    
+    
+        <article id="create-cards">
+            <h4>createCards</h4>
+            <span>
+                Este archivo JS se encarga de construir las tarjetas que recibe desde la funcion en products.
+                Para destacar, tenemos dos filtros aplicados
+                <ul>
+                    <li><p>Filtrado de imagen</p>
+                        <span>En la BD hay items que no cuentan con imagenes, teniendo valores null o string varios en la propiedad url_image, por lo que filtramos las que si tienen imagen, y a las que no, les aplicamos una imagen extraida de google imagenes.</span>
+                        <img class="img-description" src="https://i.ibb.co/ZgbY3pc/image.png">
+                    </li>
+                    <li><p>Filtrado de descuento</p>
+                    <span>En la BD existen items con descuento, por lo que mostraremos los dos precios, el original y el que tiene el descuento aplicado. Si existe un descuento, el precio original adquirira una clase nueva de CSS que tache su valor, y el precio con descuento agrandara su tamaño y adquiere un color mas llamativo</span>
+
+                    <img class="img-description" src="https://i.ibb.co/HHPwJxT/image.png">
+                </li>
+                </ul>
+            </span>
+        </article>
+
+
+        <article id="get-data">
+            <h4>getData</h4>
+            <span>
+                Este archivo de JS tiene la logica para traer la data de la BD, independientemente de que dato sea el que se pide
+            </span>
+            <p>Para trabajarlo localmente, agrege una referencia a una API que permite evitar los problemas con CORS</p>
+            <img class="img-description" src="https://i.ibb.co/hmQzn3m/image.png" alt="getData">
+        </article>
+    
+        <article id="products">
+            <h4>products</h4>
+            <span>Este archivo JS se encarga de llamar a la funcion para crear tarjetas como segundo argumento, para como primer argumento pasarle el link necesario para hacer la llamada a la API obteniendo los datos deseados</span>
+            <p>Ademas, tambien cuenta con una funcion para eliminar todas las tarjetas de preguntos y ejecuta por unica vez una llamada a la muestra de todos los productos</p>
+
+            <img class="img-description" src="https://i.ibb.co/6XzmSKP/image.png"> 
+        </article>
+    
+
+        <article id="title&c">
+            <h4>title&categories</h4>
+            <span>
+                Este archivo JS cuenta con varias funciones para el funcionamiento del Front
+            </span>
+            <ul>
+                <li>Crea el titulo de la pagina</li>
+                <li>Recibe las categorias de la BD y las mapea dentro de un dropdown, agregando tambien funciones para filtrar los items por categoria
+
+                    <p>Ademas de agregar dos nuevas categorias, recibir todos los productos y productos con descuento</p>
+                </li>
+                <img class="img-description" src="https://i.ibb.co/27XbgxY/image.png">
+                <li>
+                    Maneja el buscador y filtra desde el front lo que se ingresa
+                </li>
+                <img src="https://i.ibb.co/pzRbm6t/image.png" class="img-description">
+            </ul>
+        </article>
+    </section>
+        
+
+
+
+</body>
+</html>

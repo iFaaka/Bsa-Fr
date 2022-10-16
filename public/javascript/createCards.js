@@ -7,7 +7,9 @@ const createCards = (data) => {
     div.classList.add("m-4");
     //Create the card
 
+    //Image of card
     let img = document.createElement("img");
+    //Filter image from null or empty link
     item.url_image !== null && item.url_image !== ""
       ? (img.src = item.url_image)
       : (img.src =
@@ -18,6 +20,7 @@ const createCards = (data) => {
 
     div.appendChild(img);
 
+    //Create a div for the another part of card
     let divBody = document.createElement("div");
     divBody.classList.add("card-body");
     let title = document.createElement("p");
@@ -27,6 +30,7 @@ const createCards = (data) => {
     title.appendChild(titleContent);
     divBody.appendChild(title);
 
+    //Price of item without discount
     let divPrices = document.createElement("div");
     divPrices.classList.add("price-container");
     let price = document.createElement("p");
@@ -37,6 +41,7 @@ const createCards = (data) => {
 
     divPrices.appendChild(price);
 
+    //If the item has discount, create an element p to see it and give an special style
     let priceD = document.createElement("p");
     priceD.classList.add("price-c-disc");
 
@@ -54,6 +59,7 @@ const createCards = (data) => {
 
     divBody.appendChild(divPrices);
 
+    //Buy button
     let buyButton = document.createElement("button");
     buyButton.classList.add("btn");
     buyButton.classList.add("btn-success");

@@ -64,7 +64,7 @@ table {
 
 .img-description {
     display: block;
-    margin: 0 auto;
+    margin: 3vh auto;
 }
 
 @media (max-width: 770px) {
