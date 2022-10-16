@@ -14,6 +14,7 @@ const createCards = (data) => {
           "https://image.shutterstock.com/image-illustration/not-available-red-rubber-stamp-260nw-586791809.jpg");
 
     img.classList.add("card-img-top");
+    img.classList.add("img-card");
 
     div.appendChild(img);
 
@@ -26,24 +27,32 @@ const createCards = (data) => {
     title.appendChild(titleContent);
     divBody.appendChild(title);
 
+    let divPrices = document.createElement("div");
+    divPrices.classList.add("price-container");
     let price = document.createElement("p");
     item.discount > 0 ? price.classList.add("price-s-disc") : "";
 
-    let priceContent = document.createTextNode(item.price);
+    let priceContent = document.createTextNode(`$${item.price}`);
     price.appendChild(priceContent);
 
-    divBody.appendChild(price);
+    divPrices.appendChild(price);
 
     let priceD = document.createElement("p");
     priceD.classList.add("price-c-disc");
 
     let priceDContent = document.createTextNode(
       `${
-        item.discount > 0 ? item.price - (item.price * item.discount) / 100 : ""
+        item.discount > 0
+          ? "$" + (item.price - (item.price * item.discount) / 100)
+          : ""
       } `
     );
     priceD.appendChild(priceDContent);
-    divBody.appendChild(priceD);
+    {
+      item.discount > 0 && divPrices.appendChild(priceD);
+    }
+
+    divBody.appendChild(divPrices);
 
     let buyButton = document.createElement("button");
     buyButton.classList.add("btn");

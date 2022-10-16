@@ -2,6 +2,7 @@
 
 let section = document.getElementById("title-section");
 let h1 = document.createElement("h1");
+h1.classList.add("title");
 let h1Content = document.createTextNode("¡Bienvenidos a la tienda de BSale!");
 
 h1.appendChild(h1Content);

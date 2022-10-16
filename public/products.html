@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./stylesheets/products.css">
     <link rel="stylesheet" href="./stylesheets/title&categories.css">
+    <link rel="stylesheet" href="./stylesheets/navbar.css">
     <title>Nuestros productos</title>
         <!-- Bootstrap Link-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -13,12 +14,22 @@
 </head>
 <body>
     
-    <nav id="navbar"></nav>
+    <nav id="navbar">
+        <a class="navbar-a-img" href="./products.html">
+            <img class='navbar-img' src="https://dojiw2m9tvv09.cloudfront.net/16738/2/logobsale-open-graph8239.jpg">
+        </a>
+   <div class="navbar-a-container">
+            <a class="navbar-a" href="http://#" target="_blank" rel="noopener noreferrer">Front-End</a>
+            <a class="navbar-a" href="http://#" target="_blank" rel="noopener noreferrer">Back-End</a>
+        </div>
+    </nav>
+
+
     <section id="title-section"></section>
-    <div>
+    <div class="input-group categ-and-search-container">
         <section id="category-section">
             <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn btn-outline-secondary " type="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Categorias
                 </button>
                 <ul class="dropdown-menu">
@@ -31,7 +42,7 @@
         </section>
         <div>
             <form id="search-form">
-                <input id='search-input' placeholder="Ingrese aqui su busqueda..." type="text"/>
+                <input class="form-control" id='search-input' placeholder="Ingrese aqui su busqueda..." type="text"/>
             </form>
 
         </div>
@@ -40,7 +51,7 @@
 
 
     <section id="product-section"></section>
-    <script src="./javascript/nav.js"></script>
+
 
 
     <script src="./javascript/getData.js"></script>

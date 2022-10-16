@@ -1,0 +1,29 @@
+#navbar {
+    position: sticky;
+    height: 5vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+}
+
+.navbar-img {
+    height: 100%;
+}
+
+.navbar-a-img {
+    height: 100%;
+}
+
+.navbar-a-container {
+    display: flex;
+    font-size: 1rem;
+    gap: 5vw;
+}
+
+.navbar-a {
+    text-decoration: none;
+    color: black;
+}

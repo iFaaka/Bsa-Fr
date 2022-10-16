@@ -1,7 +1,39 @@
 .price-s-disc {
     text-decoration: line-through;
+
 }
 
 .price-c-disc {
     color: green;
+    font-size: 1.4rem;
+}
+
+
+.card-body {
+    text-align: center;
+}
+
+.price-container {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+@media (min-width: 770px) {
+    #product-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 25vw;
+        height: 48vh !important;
+
+    }
+
+    .img-card {
+        max-height: 25vh;
+    }
 }

@@ -1,5 +1,30 @@
+.title {
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 3vh;
+}
+
 .capitalize {
     text-decoration: none;
     color: black;
     text-transform: capitalize;
+}
+
+.categ-and-search-container {
+    display: flex;
+    align-items: center;
+    margin: 0 3vw;
+    width: 94vw;
+    gap: 1vw;
+    justify-content: center;
+}
+
+#search-input {
+    width: 70vw
+}
+
+@media (min-width: 770px) {
+    .categ-and-search-container {
+        margin: 3vh 0;
+    }
 }

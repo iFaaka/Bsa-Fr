@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    font-family: sans-serif;
+
+}
+
+aside {
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.aside-div {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    z-index: 1000;
+    top: 3vh;
+    margin-top: 3vh;
+    gap: 1vh;
+}
+
+.aside-div a {
+    text-decoration: none;
+    color: rgba(34, 110, 147, 1);
+    ;
+}
+
+.aside-div a:hover {
+    text-decoration: underline;
+    user-select: none;
+    cursor: pointer;
+}
+
+h1,
+h4 {
+    color: rgba(34, 110, 147, 1);
+}
+
+h1 {
+    font-size: 4vh;
+}
+
+h4 {
+    margin-top: 5vh !important;
+    font-size: 2.5vh;
+}
+
+
+
+table {
+    border: solid 3px grey;
+    margin-top: 1vh;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2vh;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 2vh;
+}
+
+.img-description {
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 770px) {
+    aside {
+        display: none;
+    }
+
+    body {
+        padding: 2vh;
+    }
+}
