@@ -27,3 +27,7 @@
     text-decoration: none;
     color: black;
 }
+
+.navbar-a:hover {
+    color: #ff5c1a;
+}

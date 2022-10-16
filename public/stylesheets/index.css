@@ -26,3 +26,9 @@ h1 {
 .description-article button a {
     color: white;
 }
+
+.explication {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 3vh;
+}

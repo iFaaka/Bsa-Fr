@@ -12,12 +12,14 @@ function createCategoriesMenu(data) {
   let ulList = document.querySelector(".dropdown-menu");
 
   let allItems = document.querySelector(".li-item-all");
+  allItems.classList.add("categ");
   allItems.onclick = () => {
     emptyProducts();
     getProducts();
   };
 
   let discItems = document.querySelector(".li-item-disc");
+  discItems.classList.add("categ");
   discItems.onclick = () => {
     emptyProducts();
     discProducts();
@@ -28,6 +30,7 @@ function createCategoriesMenu(data) {
     let li = document.createElement("li");
     let a = document.createElement("a");
     a.classList.add("capitalize");
+    a.classList.add("categ");
     a.onclick = () => {
       emptyProducts();
       productsByCategory(item.id);
