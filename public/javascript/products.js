@@ -13,6 +13,10 @@ function discProducts() {
   getData("discount", createCards);
 }
 
-function productsByCategory() {
-  getData(`category/${id}`, createCards);
+function productsByCategory(id) {
+  getData(`products/${id}`, createCards);
+}
+
+function searchProducts(value) {
+  getData(`search/${value}`, createCards);
 }
